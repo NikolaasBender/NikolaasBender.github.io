@@ -1,1 +1,157 @@
-testy test test
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<html>
+<style>
+body {background-color: lightgray;}
+h1   {color: black;}
+p    {color: white;}
+
+
+</style>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Nikolaas Bender</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a onclick="switcheroo('h')">Home</a></li>
+      <li><a href="https://github.com/NikolaasBender">GitHub</a></li>
+      <li><a onclick="switcheroo('s')">Social</a></li>
+      <li><a onclick="switcheroo('c')">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container" id="body" style="display:block;">
+	<div id="home" style="display:block;">
+		<div>Look at this home text</div>
+	</div>
+
+
+
+	<div id="social" style="display:none;">
+		<div>social</div>
+	</div>
+
+
+
+	<div id="contact" style="display:none;">
+		<div>contact me at nikolaas.bender@colrado.edu</div>
+	</div>
+</div>
+
+
+<div class="container" id="easteregg" style="display:none;">
+	
+</div>
+
+
+
+<script type="text/javascript">
+
+
+	function switcheroo(choice) {
+		var h = document.getElementById("home");
+		var s = document.getElementById("social");
+		var c = document.getElementById("contact");
+
+		if(choice == "h"){
+			if (h.style.display === "block") {
+	        	h.style.display = "none";
+	    	} else {
+	        	h.style.display = "block";
+	        	s.style.display = "none";
+	        	c.style.display = "none";
+	    	}
+		}
+
+
+		if(choice == "s"){
+			if (s.style.display === "block") {
+	        	s.style.display = "none";
+	    	} else {
+	        	s.style.display = "block";
+	        	h.style.display = "none";
+	        	c.style.display = "none";
+	    	}
+		}
+
+
+		if(choice == "c"){
+			if (c.style.display === "block") {
+	        	c.style.display = "none";
+	    	} else {
+	        	c.style.display = "block";
+	        	s.style.display = "none";
+	        	h.style.display = "none";
+	    	}
+		}
+	}
+
+	// a key map of allowed keys
+	var allowedKeys = {
+	  37: 'left',
+	  38: 'up',
+	  39: 'right',
+	  40: 'down',
+	  65: 'a',
+	  66: 'b'
+	};
+
+	// the 'official' Konami Code sequence
+	var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+
+	// a variable to remember the 'position' the user has reached so far.
+	var konamiCodePosition = 0;
+
+	// add keydown event listener
+	document.addEventListener('keydown', function(e) {
+	  // get the value of the key code from the key map
+	  var key = allowedKeys[e.keyCode];
+	  // get the value of the required key from the konami code
+	  var requiredKey = konamiCode[konamiCodePosition];
+
+	  // compare the key with the required key
+	  if (key == requiredKey) {
+
+	    // move to the next key in the konami code sequence
+	    konamiCodePosition++;
+
+	    // if the last key is reached, activate cheats
+	    if (konamiCodePosition == konamiCode.length) {
+	      activateCheats();
+	      konamiCodePosition = 0;
+	    }
+	  } else {
+	    konamiCodePosition = 0;
+	  }
+	});
+
+	function activateCheats() {
+	 //  	var b = document.getElementById("body");
+		// var e = document.getElementById("easteregg");
+
+		// if (b.style.display === "block") {
+  //       	b.style.display = "none";
+  //       	e.style.display = "block";
+  //   	} else {
+  //       	b.style.display = "block";
+  //       	e.style.display = "none";
+  //   	}
+
+  		document.body.style.backgroundImage = "url('mountains_fog_trees_sky_118876_3840x2160.jpg')";
+	}
+
+</script>
+
+</html>
