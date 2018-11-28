@@ -15,6 +15,20 @@ p    {color: white;}
   padding: $spacer * 3 !important;
 }
 
+p.ex1 {
+    margin-bottom: 5em;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #232323;
+    color: white;
+    text-align: center;
+}
+
+
 </style>
 
 
@@ -24,7 +38,7 @@ p    {color: white;}
       <a class="navbar-brand" href="#">Nikolaas Bender</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a onclick="switcheroo('h')">Home</a></li>
+      <li><a onclick="switcheroo('h')">Home</a></li>
       <li><a href="https://github.com/NikolaasBender">GitHub</a></li>
       <li><a onclick="switcheroo('s')">"Blog"</a></li>
       <li><a onclick="switcheroo('c')">Contact</a></li>
@@ -36,25 +50,48 @@ p    {color: white;}
 
 <div class="container" id="body" style="display:block;">
 	<div id="home" style="display:block;">
-		<div>Look at this home text</div>
+		<div class="col-sm-3">
+			<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: 300px;">
+		</div>
 	</div>
 
 
 
 	<div id="social" style="display:none;">
 		<div><h1>Blog kind of stuff</h1></div>
+		<div class="row">
+			<div class="col-xs-7">
+				<iframe height='600' width='600' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/5021410/latest-rides/d4ac8ff58877c19b9d9d8c027f5e859e121c4ac6'></iframe>
+			</div>
+			<div class="col-xs-5">
+				<a class="twitter-timeline" data-width="600" data-height="450" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/RaptureFlex?ref_src=twsrc%5Etfw">Tweets by RaptureFlex</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			
+		</div>
+			
+			
 			<div class="card" style="width: 32rem; background-color: gray; padding: 3rem; ">
 			  <div class="card-body">
 			    <h3 class="card-title">11/7/18</h3>
 			    <p class="card-text">This is primarily a test but this whole section is supposed to be kind of like a blog. I think ideally it will automatically pull any commit and coment to the github account so that I don't have to come in here and type in raw html like I am now...</p>
 			  </div>
 			</div>
+
+			<div class="card" style="width: 32rem; background-color: gray; padding: 3rem; ">
+			  <div class="card-body">
+			    <h3 class="card-title">11/27/18</h3>
+			    <p class="card-text">Hi Ho Lets go bumble dev bot! So I'm using a small robot kit from my roommate to build a small bumblebot that I can use to develop code more rapidly. "Why not use the full sized bumblebot?" That part of the project has been handed off to my friend Ryan who is a mechE and isn't terrabad at CAD. I can stumble through CAD and solidworks but that is far from my forte, however Ryan loves to do that stuff so he is tasked with making the body of the robot. BUT he is busy for at least the next month so enter mini bumblebot. </p>
+			  </div>
+			</div>
+			
 	</div>
 
 
 
 	<div id="contact" style="display:none;">
-		<div>contact me at nikolaas.bender@colrado.edu</div>
+		<div>
+			<h2>Contact me at nikolaas.bender@colrado.edu</h2>
+		</div>
 	</div>
 </div>
 
@@ -64,10 +101,17 @@ p    {color: white;}
 </div>
 
 
+<div class="footer">
+	<div>
+		<p>This is just a footer... Hello!</p>
+	</div>
+</div>
+
 
 <script type="text/javascript">
 
 
+	//THIS IS THE NAVIGATION OF THE SITE
 	function switcheroo(choice) {
 		var h = document.getElementById("home");
 		var s = document.getElementById("social");
@@ -106,6 +150,9 @@ p    {color: white;}
 		}
 	}
 
+
+
+	//THE CHEAT CODES ;)
 	// var mtnKeys = {
 	//   83: 's',
 	//   72: 'h',
