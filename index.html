@@ -28,6 +28,21 @@ p.ex1 {
     text-align: center;
 }
 
+.content-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
 
 </style>
 
@@ -48,30 +63,49 @@ p.ex1 {
 
 
 
-<div class="container row" id="body" style="display:block;">
+<div class="container row" id="body" style="display:block; padding-bottom: 10rem">
+	
 	<div id="home" style="display:block;">
-		<div class="col-sm-4">
-			<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: 500px;">
+		<div class="jumbotron" style="background-color: #4286f4">
+		    <h1>"Good people, good times"</h1>
 		</div>
-		<div class="col-sm-3">
-			<div class="card" style="width: 70rem; background-color: gray; padding: 3rem; float: middle">
-			  <div class="card-body">
-			    <p class="card-text" style="font-size: 24px; " >I'm Nick Bender, I'm a computer science student at the University of Colorado Boulder. I love to build stuff, I really don't care  too much about what I'm building. Starting like most with legos and now building robots, websites, and corperate utilities. On this site you will find a link to my GitHub and some other information about me. If you have any questions for me go to the contact page and email me. </p>
-			  </div>
+		<div class="row" style="padding-bottom: 2rem">
+			<div class="col-md-5">
+				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: 500px;">
 			</div>
-		</div>	
+			<div class="container-fluid col-md-7">
+				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+				  <div class="card-body">
+				    <p class="card-text" style="font-size: 24px; " >I'm Nick Bender, I'm a computer science student at the University of Colorado Boulder. I love to build stuff, I really don't care  too much about what I'm building. Starting like most with legos and now building robots, websites, and corperate utilities. On this site you will find a link to my GitHub and some other information about me. If you have any questions for me go to the contact page and email me. </p>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-5">
+				<img src="BumbleMini.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: 350px;">
+			</div>
+			<div class="container-fluid col-md-5">
+				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+				  <div class="card-body">
+				    <p class="card-text" style="font-size: 24px; " >This crazy looking thing is BumbleMini the smaller development platform for my BumbleBot project so I can develop faster not worry about building the hardware as much. </p>
+				  </div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 
 	<div id="social" style="display:none;">
-		<div><h1>Blog kind of stuff</h1></div>
+		<div style="padding-left: 10rem"><h1>Blog kind of stuff</h1></div>
 		<div class="container-fluid row" style="padding-left: 10rem; padding-right: 10rem;">
-			<div class="col-xs-7">
-				<iframe height='600' width='600' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/5021410/latest-rides/d4ac8ff58877c19b9d9d8c027f5e859e121c4ac6'></iframe>
+			<div class="col-md-7 content-container">
+				<iframe class="" frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/5021410/latest-rides/d4ac8ff58877c19b9d9d8c027f5e859e121c4ac6'></iframe>
 			</div>
-			<div class="col-xs-5">
-				<a class="twitter-timeline" data-width="600" data-height="450" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/RaptureFlex?ref_src=twsrc%5Etfw">Tweets by RaptureFlex</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<div class="col-md-5">
+				<a class="twitter-timeline" data-height="500" href="https://twitter.com/RaptureFlex?ref_src=twsrc%5Etfw">Tweets by RaptureFlex</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			
 		</div>
@@ -83,11 +117,16 @@ p.ex1 {
 				    <p class="card-text" >This is primarily a test but this whole section is supposed to be kind of like a blog. I think ideally it will automatically pull any commit and coment to the github account so that I don't have to come in here and type in raw html like I am now...</p>
 				  </div>
 				</div>
-
 				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
 				  <div class="card-body">
 				    <h3 class="card-title">11/27/18</h3>
 				    <p class="card-text">Hi Ho Lets go bumble dev bot! So I'm using a small robot kit from my roommate to build a small bumblebot that I can use to develop code more rapidly. "Why not use the full sized bumblebot?" That part of the project has been handed off to my friend Ryan who is a mechE and isn't terrabad at CAD. I can stumble through CAD and solidworks but that is far from my forte, however Ryan loves to do that stuff so he is tasked with making the body of the robot. BUT he is busy for at least the next month so enter mini bumblebot. </p>
+				  </div>
+				</div>
+				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
+				  <div class="card-body">
+				    <h3 class="card-title">12/2/18</h3>
+				    <p class="card-text">So you'll see the Bumble2.py file in currently running code because that is what is running on the robot right now. It does detect stairs reliably, right now the focus is back on hardware for the power supply because this little robot sucks through a lot of power. However the prototype battery management system is underway. So its getting better. I want to have it rolling around the house within 7 days and the battery management within 14. So that's where the project stands right now. </p>
 				  </div>
 				</div>
 			</div>
@@ -98,7 +137,7 @@ p.ex1 {
 
 
 	<div id="contact" style="display:none;">
-		<div>
+		<div style="padding-left: 10rem">
 			<h2>Contact me at nikolaas.bender@colrado.edu</h2>
 		</div>
 	</div>
