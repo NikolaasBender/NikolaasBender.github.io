@@ -107,9 +107,10 @@ p.ex1 {
 			<div class="col-md-5">
 				<a class="twitter-timeline" data-height="500" href="https://twitter.com/RaptureFlex?ref_src=twsrc%5Etfw">Tweets by RaptureFlex</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
-			
 		</div>
 			
+			<hr>
+
 			<div class="container-fluid row" style="padding-left: 10rem; padding-right: 10rem; padding-bottom: 20rem">
 				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
 				  <div class="card-body">
@@ -127,6 +128,12 @@ p.ex1 {
 				  <div class="card-body">
 				    <h3 class="card-title">12/2/18</h3>
 				    <p class="card-text">So you'll see the Bumble2.py file in currently running code because that is what is running on the robot right now. It does detect stairs reliably, right now the focus is back on hardware for the power supply because this little robot sucks through a lot of power. However the prototype battery management system is underway. So its getting better. I want to have it rolling around the house within 7 days and the battery management within 14. So that's where the project stands right now. </p>
+				  </div>
+				</div>
+				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
+				  <div class="card-body">
+				    <h3 class="card-title">12/6/18</h3>
+				    <p class="card-text">Big news: the battery management system is most of the way done. I have the prototype built and working mostly. Its an absolute mess and im not using the final components so in the end it will be using a relay board so I can control 8 different battery cells and it will be nice and clean with an arduino nano so that everything is nice and compact. I'll be uploading schematics later but its a way of dynamically changing battery configuration so that when charging the batteries are all in a parallel configuration and thus self balance ensuring that the batteries can't drift too far some one another in terms of voltage. Then when the system needs to run the configuration changes so that they cells are in parallel and produce a higher voltage needed for running all of the other circuitry. the other cool part is that because the batteries fail to parallel, if the system loses power for any reason the batteries drop back to the parallel configuration and the likelihood of something bad happening drops dramatically. </p>
 				  </div>
 				</div>
 			</div>
@@ -283,7 +290,7 @@ p.ex1 {
 </div>
 
 
-<div class="footer">
+<div class="footer content-container">
 	<div>
 		<p>If stuff looks weird on this website and you are using the edge browser or internet explorer just reload the page in chrome or firefox</p>
 	</div>
