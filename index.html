@@ -71,13 +71,13 @@ p.ex1 {
 
 <div class="container row center" id="body" style="display:block; padding-bottom: 10rem;">
 	
-	<div id="home" style="display:block; padding-left: 7rem">
-		<div style="padding-left: 10rem: padding-right: 10rem; padding-bottom: 5rem; padding-top: 5rem; background: #86816C; background: linear-gradient(to right, #86816C, lightgray);" class="jumbotron">
+	<div id="home" style="display:block; padding-left: 10rem: padding-right: 10rem;">
+		<div style=" padding-bottom: 5rem; padding-top: 5rem; background: #86816C; background: linear-gradient(to right, #86816C, lightgray);" class="jumbotron">
 		    <h1>"Good people, good times"</h1>
 		</div>
 		<div class="row" style="padding-bottom: 2rem">
 			<div class="col-md-5">
-				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: 500px;">
+				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="width: auto; height: height;">
 			</div>
 			<div class="container-fluid col-md-7">
 				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
@@ -162,6 +162,12 @@ p.ex1 {
 				  <div class="card-body">
 				    <h3 class="card-title">12/28/18</h3>
 				    <p class="card-text">So, on my instagram I have a very candid video series documenting the work I've been doing over the past few days. In a written and more professional form I will do some more explaining. I am using four HC-sr04 ultrasonic sensors to figure out where walls are. They emmit an ultrasonic pulse at 40k Hz, and listen and we measue how long it takes for it to hear that echo, from that we can calculate the time of flight and we know the distance that it reports through some simple algebra. There is a pre-made library called GPIO zero which I think I've mentioned before, in a short form: it makes interfacing with sensors and stuff really easy. Easy until theres bad data, and lots of it. With the pre-made gipo zero system I am getting loads of garbage data. I have been running tests using different resistors and some algebra to average the data. I have come to the conclusion that there is some black magic at work... or the gpio zero class for the sensors doesn't work as it really should. Running a range of tests between 10,000 and 100,000 measurements with removing bad data and averaging and everything I could think of to remove bad data and collect better data taught me a lot. A lot of the time was taken up with trying to average data, going from 100,000 measurements to 10,000 measurements cleaned up data and the time it took dropped 66% but that includes removing math too. So the data doesn't benefit from averaging I was seeing larger deltas in the data. One good measurement is a lot better than 10 ok/bad measurements. Now the trick is to get the sensors to play well when they are setup in an array. I guess I could stagger the measurements so that the pulses dont overlap and only measure stuff up to a certian distance and anything outside of that is just neglected. Maybe have an algorithm that will identify bad data and get new data. </p>
+				  </div>
+				</div>
+				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
+				  <div class="card-body">
+				    <h3 class="card-title">12/30/18</h3>
+				    <p class="card-text">Bumblemini works! It rolls around the kitchen and avoids the cat. It raoves completely autonomously. This deserves... a redbull, how do people celebrate? I need to reconnect the webcam so it can take pictures again but its moving on its own and thats the big acheivement. The next phase is the human control phase to take a lot of photos. Looking even further forwards I need to make more ultrasound sensors, build the big battery, and build BumbleBot. The human control is proving to be significantly tougher than it should be, but that hasn't stopped me yet. </p>
 				  </div>
 				</div>
 			</div>
