@@ -77,8 +77,8 @@ p.ex1 {
 		</div>
 		<hr>
 		<div class="row" style="padding-bottom: 2rem">
-			<div class="col-md-5">
-				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="max-width: 100%; height: height;">
+			<div class="col-md-5" style="max-width: 550px; width: auto;">
+				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="max-width: 500px; width: auto; height: auto;">
 			</div>
 			<div class="container-fluid col-md-7">
 				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
@@ -90,8 +90,8 @@ p.ex1 {
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-md-6">
-				<img src="BumbleMini.jpg" class="img-fluid" alt="Responsive image" style="max-width: 100%; height: auto;">
+			<div class="col-md-6" style="max-width: 550px; width: auto;">
+				<img src="BumbleMini.jpg" class="img-fluid" alt="Responsive image" style="max-width: 500px; width: auto; height: auto;">
 			</div>
 			<div class="container-fluid col-md-5">
 				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
@@ -189,6 +189,12 @@ p.ex1 {
 				  <div class="card-body">
 				    <h3 class="card-title">1/15/19</h3>
 				    <p class="card-text">Back at school and I am stoked for Advanced robotics. The amout of hands on learning we will be doing looks incredible. BumbleBot work has slowed again, I am working on getting a version of tensorflow to work on my server so that I can do all of the training on the 12c/24t behemoth instead of my laptop. The issue that I have right now is that the PIP install of tensorflow requires AVX for better vector operations but the server I have is a decade old this year and doesnot support AVX so I need to recompile tensorflow, the issue is that the process that tensorflow recomends is tedious and complicated. I found someone who put up a docker container will all the stuff I need to recompile tensorflow for my server. Now the issue is that bazel is giving me issues when I run the compilation. This project has taught me so much more outside of just building the robot, and the learning has no sign of stopping. Is it weird that I enjoy the constant challenges and getting my shit mixed by this project every day (I don't know a better way to phrade it).</p>
+				  </div>
+				</div>
+				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
+				  <div class="card-body">
+				    <h3 class="card-title">1/17/19</h3>
+				    <p class="card-text">BubleBot is under construction. The chassis may be re designed in the future but for now, the chassis we already have built will do. I am transplanting all of the electronics and building assembling the bigger battery. The battery is made of 11 lithium 18650 batteries in parallel, that is one cell. Four of those cells in series makes the battery pack. I am putting a balancing system on the pack because lithoim fires are bad and I like going to school here. So the run time should be significantly longer than when I was using the 600mah batteries, but these batteries are cheap ebay ones so we'll see how long they last. Initial tests will be done with a fire extinguisher on hand, ya know... just in case. </p>
 				  </div>
 				</div>
 			</div>			
@@ -372,7 +378,7 @@ p.ex1 {
 				    	Fund of scientific inquiry (PHYS 1400)<br/>
 				    	Computer systems (CSCI 2400)<br/>
 				    	Discrete structures (CSCI 2824)<br/>
-				    	Software Development (CSCI )<br/>
+				    	Software Development (CSCI 3308)<br/>
 				    	Advanced Robotics (CSCI 4302)<br/>
 				    </p>
 				</div>
