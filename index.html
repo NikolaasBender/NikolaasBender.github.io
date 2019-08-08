@@ -5,52 +5,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
 <html>
-<style>
-body {background-color: lightgray;}
-h1   {color: black;}
-p    {color: white;}
-
-.p-5 {
-  padding: $spacer * 3 !important;
-}
-
-p.ex1 {
-    margin-bottom: 5em;
-}
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #232323;
-    color: white;
-    text-align: center;
-}
-
-.content-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.content-container {
-    position: relative;
-    padding-bottom: 2rem;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-}
-
-.center {
-  margin: auto;
-  width: 90%;
-  padding: 10px;
-}
-
-</style>
 
 
 <nav class="navbar navbar-inverse">
@@ -127,80 +83,8 @@ p.ex1 {
 			<div class="container-fluid row" style = "padding-bottom: 20rem; align-content: center">
 				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
 				  <div class="card-body">
-				    <h3 class="card-title">11/7/18</h3>
-				    <p class="card-text" >This is primarily a test but this whole section is supposed to be kind of like a blog. I think ideally it will automatically pull any commit and coment to the github account so that I don't have to come in here and type in raw html like I am now...</p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">11/27/18</h3>
-				    <p class="card-text">Hi Ho Lets go bumble dev bot! So I'm using a small robot kit from my roommate to build a small bumblebot that I can use to develop code more rapidly. "Why not use the full sized bumblebot?" That part of the project has been handed off to my friend Ryan who is a mechE and isn't terrabad at CAD. I can stumble through CAD and solidworks but that is far from my forte, however Ryan loves to do that stuff so he is tasked with making the body of the robot. BUT he is busy for at least the next month so enter mini bumblebot. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/2/18</h3>
-				    <p class="card-text">So you'll see the Bumble2.py file in currently running code because that is what is running on the robot right now. It does detect stairs reliably, right now the focus is back on hardware for the power supply because this little robot sucks through a lot of power. However the prototype battery management system is underway. So its getting better. I want to have it rolling around the house within 7 days and the battery management within 14. So that's where the project stands right now. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/6/18</h3>
-				    <p class="card-text">Big news: the battery management system is most of the way done. I have the prototype built and working mostly. Its an absolute mess and im not using the final components so in the end it will be using a relay board so I can control 8 different battery cells and it will be nice and clean with an arduino nano so that everything is nice and compact. I'll be uploading schematics later but its a way of dynamically changing battery configuration so that when charging the batteries are all in a parallel configuration and thus self balance ensuring that the batteries can't drift too far some one another in terms of voltage. Then when the system needs to run the configuration changes so that they cells are in parallel and produce a higher voltage needed for running all of the other circuitry. the other cool part is that because the batteries fail to parallel, if the system loses power for any reason the batteries drop back to the parallel configuration and the likelihood of something bad happening drops dramatically. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/14/18</h3>
-				    <p class="card-text"> Finals season is upon us, but that means that I will soon have loads of time to work on non-school projects. Trail stat (TIDB) is back with api fixes, BumbleBot is charging forwards with some custom PCBs, and I will finally get some sleep. Right now the issue with bumble bot is building a good enough platform for all of the electronics. Once that gets all sorted he'll be rolling reliably and ready for data collection...Hopefully the dog doesn't freak out too much with BumbleBot rolling around the house...</p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/25/18</h3>
-				    <p class="card-text">Bumble mini works... kind of. So the sensors are not correctly calibrated and the robot "hallucinates" thinking thereare stairs when there arent any. Some chassis modifications will need to be made to correct this issue. Also building a "hat" for the raspberry pi will be useful in the future so the sensors can be configured once and easily connected/disconnected when the raspi has to come off. Other changes I might make for the future include: consistently colored wires, better ultrasound modules (better packaging on my part), more battery power and better battery mounting. On a slightly different note, I have started working on the neural net that will pilot full sized BumbleBot.</p>
-				  </div>
-				</div>
-				<div class="card col-sm-8" style="width: 64rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/28/18</h3>
-				    <p class="card-text">So, on my instagram I have a very candid video series documenting the work I've been doing over the past few days. In a written and more professional form I will do some more explaining. I am using four HC-sr04 ultrasonic sensors to figure out where walls are. They emmit an ultrasonic pulse at 40k Hz, and listen and we measue how long it takes for it to hear that echo, from that we can calculate the time of flight and we know the distance that it reports through some simple algebra. There is a pre-made library called GPIO zero which I think I've mentioned before, in a short form: it makes interfacing with sensors and stuff really easy. Easy until theres bad data, and lots of it. With the pre-made gipo zero system I am getting loads of garbage data. I have been running tests using different resistors and some algebra to average the data. I have come to the conclusion that there is some black magic at work... or the gpio zero class for the sensors doesn't work as it really should. Running a range of tests between 10,000 and 100,000 measurements with removing bad data and averaging and everything I could think of to remove bad data and collect better data taught me a lot. A lot of the time was taken up with trying to average data, going from 100,000 measurements to 10,000 measurements cleaned up data and the time it took dropped 66% but that includes removing math too. So the data doesn't benefit from averaging I was seeing larger deltas in the data. One good measurement is a lot better than 10 ok/bad measurements. Now the trick is to get the sensors to play well when they are setup in an array. I guess I could stagger the measurements so that the pulses dont overlap and only measure stuff up to a certian distance and anything outside of that is just neglected. Maybe have an algorithm that will identify bad data and get new data. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">12/30/18</h3>
-				    <p class="card-text">Bumblemini works! It rolls around the kitchen and avoids the cat. It raoves completely autonomously. This deserves... a redbull, how do people celebrate? I need to reconnect the webcam so it can take pictures again but its moving on its own and thats the big acheivement. The next phase is the human control phase to take a lot of photos. Looking even further forwards I need to make more ultrasound sensors, build the big battery, and build BumbleBot. The human control is proving to be significantly tougher than it should be, but that hasn't stopped me yet. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">1/1/19</h3>
-				    <p class="card-text">The self driving works, the remote control works, the camera works. There is some refinement to be done but overall I am super happy. So now I need to collect a lot of data and start shoving it into something to learn form it. I'm also going to script the photo transfer from the raspi to a seperate computer. I also need to do some more research but I think that I'm also going to make a way to save photos to different directoreis which might help with the machine learning (reason for more research). </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">1/6/19</h3>
-				    <p class="card-text">Collecting data for the machine larning part of this project is hard. That will take a while. But I have also broken out all of the methods and classes and functions needed for running the robot. So that is bumble3, bumble3 is all about that breakout. So this is the next step towards the ai war machine that is bumblebot. Thats a joke... 100% a joke, I'm not training it to attack the ankles of white people. But going back to the ML part of this project. Even with tensorflow and keras and loads of storage, this is some hard stuff. I need to learn more, BUT!! I think I have a way to get there. I need more training data and I'm going to experiment with more layers in the keras model. on top of that I need to look into the output layer and see what that should look like for differnt decisions. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">1/15/19</h3>
-				    <p class="card-text">Back at school and I am stoked for Advanced robotics. The amout of hands on learning we will be doing looks incredible. BumbleBot work has slowed again, I am working on getting a version of tensorflow to work on my server so that I can do all of the training on the 12c/24t behemoth instead of my laptop. The issue that I have right now is that the PIP install of tensorflow requires AVX for better vector operations but the server I have is a decade old this year and doesnot support AVX so I need to recompile tensorflow, the issue is that the process that tensorflow recomends is tedious and complicated. I found someone who put up a docker container will all the stuff I need to recompile tensorflow for my server. Now the issue is that bazel is giving me issues when I run the compilation. This project has taught me so much more outside of just building the robot, and the learning has no sign of stopping. Is it weird that I enjoy the constant challenges and getting my shit mixed by this project every day (I don't know a better way to phrade it).</p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">1/17/19</h3>
-				    <p class="card-text">BubleBot is under construction. The chassis may be re designed in the future but for now, the chassis we already have built will do. I am transplanting all of the electronics and building assembling the bigger battery. The battery is made of 11 lithium 18650 batteries in parallel, that is one cell. Four of those cells in series makes the battery pack. I am putting a balancing system on the pack because lithoim fires are bad and I like going to school here. So the run time should be significantly longer than when I was using the 600mah batteries, but these batteries are cheap ebay ones so we'll see how long they last. Initial tests will be done with a fire extinguisher on hand, ya know... just in case. </p>
-				  </div>
-				</div>
-				<div class="card col-sm-4" style="width: 32rem; background-color: gray; padding: 3rem; ">
-				  <div class="card-body">
-				    <h3 class="card-title">1/29/19</h3>
-				    <p class="card-text">The first video about bumblebot is live. It's just the intro and its not great but it does its job. In other news the battery is completely assembeled, which is exciting. The chassis for bumblebot is under construction, its being made out of metal. Finally I think I have a way to collect all of the data I need for the machine learning part of this project. What I'm going to do is use the gamepad for the RC mode to create data for training the algorithm. So the camera will be taking images in the form of  amatrix of numbers. Then the controller will be outputting an array of numbers like [1, 0, 0, 0]. That data will be put into a list that looks like [matrix, gamepad] and that will be saved for processing on the server. When I told my robotics professor about this plan he laughed, which means I'm gonna have a fun time with this part of the project.</p>
+				    <h3 class="card-title"> What I do with my free time</h3>
+				    <p class="card-text" >I learn more about programming through projects. I build neural networks </p>
 				  </div>
 				</div>
 			</div>			
@@ -216,139 +100,6 @@ p.ex1 {
 		<hr>
 		<div>
 			<h1>My Work: </h1>
-			<!-- <div class="container" style="background-color: #3B4086">
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				<br/>
-
-				</p>
-				<p class="western" style="margin-left: 2.5in; text-indent: 0.5in; margin-bottom: 0.07in; line-height: 108%">
-				<b>Nikolaas Bender</b> 
-				</p>
-				<p class="western" style="margin-bottom: 0in; line-height: 105%"><b>Goal</b>:
-				Seeking an internship or job in the fields of Computer Science and
-				Electronics 
-				</p>
-				<p class="western" style="margin-left: 0.25in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	</font></font><b>EDUCATION:	</b>
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	</font></font>University
-				of Colorado Boulder 	Expected graduation Spring 2020 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	</font></font>Major:
-				Computer Science	 
-				</p>
-				<p class="western" style="margin-left: 0.5in; margin-bottom: 0in; line-height: 105%">
-				Significant course work completed: Programming in C, Freshman
-				Projects, Data Structures (C++), 
-				</p>
-				<p class="western" style="margin-left: 0.5in; margin-bottom: 0in; line-height: 105%">
-				Calculus 1 &amp; 2, Differential Equations, Experimental Physics,
-				Electricity and Magnetism Physics, Computer Systems, Discrete Math,
-				Linear algebra.	 
-				</p>
-				<p class="western" style="margin-left: 0.5in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0.25in; margin-bottom: 0in; line-height: 108%">
-				<b>WORK EXPERIENCE:</b> 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0.07in; line-height: 105%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	</font></font><i><b>Instructor,
-				</b></i><font face="Calibri, serif"><font size="3" style="font-size: 12pt">​</font></font>Balanced
-				Martial Arts, Eastchester, NY	  2011 - 2016 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0.07in; line-height: 105%">
-				            <i><b>Software development Intern, </b></i>IQVIA, New
-				Brunswick, NJ                                   Summer 2018</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	 
-				</font></font><b>PROGRAMMING EXPERIENCE:	      </b>Python, C++, C,
-				Java, HTML, Arduino, Bash, SQL server</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-						C#, VSTS, octopus, GIT, JavaScript, bootstrap 4, Tensorflow</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				<br/>
-				<br/>
-
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				       <b>RELATED EXPERIENCE:	</b><span style="font-weight: normal">Agile
-				teamwork, SDLC design principal, web design, </span>
-				</p>
-				<p class="western" style="margin-left: 0.25in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	 
-				</font></font><b>PROJECTS:	 </b>
-				</p>
-				<ul>
-					<li/>
-				<p class="western" style="text-indent: 0in; margin-bottom: 0.02in; line-height: 105%">
-					<b>BumbleBot:</b><font face="Calibri, serif">​</font> (In
-					progress) Autonomous robot that will ultimately use a combination of
-					edge and “cloud” computing to navigate a building using a neural
-					network and vision system. Challenges include embedded systems,
-					battery management, object recognition systems, high performance
-					data processing, CAD, motor control, and real world data collection.</p>
-					<li/>
-				<p class="western" style="text-indent: 0in; margin-bottom: 0.04in; line-height: 105%">
-					<b>Web history searcher:</b><font face="Calibri, serif">​</font>
-					Leveraging algorithms and logic from programming in C class for a
-					real life situation. Its a project that converts a SQL file into a
-					plain text file. That is then used to analyze website history,
-					finding the 3 most popular sites then allowing for basic query.  
-					</p>
-					<li/>
-				<p class="western" style="text-indent: 0in; margin-bottom: 0.04in; line-height: 105%">
-					<b>Automated SQL deployment: </b>During the summer of 2018 I worked
-					at IQVIA building a backend utility to automatically deploy sql
-					scripts for database upgrades. The utility was designed in a
-					scalable and robust way so that it works with one script and one
-					hundred thousand scripts. The utility determined what sql scripts to
-					run automatically based on a table and what it could find in a VSTS
-					drop folder. The utility error and success logged to a separate
-					database and halted deployment if an issue was detected. That
-					separate database is coupled to a website for developers to check
-					what happened during the last deployment in a secure and distributed
-					way. Along the way my team mate and I had to present our progress in
-					the project every other week in a meeting. 
-					</p>
-				</ul>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0.08in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%"><a name="_GoBack"></a>
-				<font face="Calibri, serif"><font size="2" style="font-size: 11pt">	 
-				   </font></font><b>INTERESTS: </b>International travel, Mountain
-				biking, Building computers, Robotics, Music, Cooking<font color="#ff0000">
-				</font>
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				<br/>
-				<br/>
-
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 105%">
-				      <b>OTHER: </b>CU Boulder mountain bike team: downhill racing</p>
-				<p class="western" style="margin-left: 2.02in; text-indent: 0in; margin-bottom: 0.07in; line-height: 108%">
-				 
-				</p>
-				<p class="western" style="margin-left: 0in; text-indent: 0in; margin-bottom: 0in; line-height: 108%">
-				 
-				</p>
-				</div>
-			</div>
-		</div> -->
-
 		<div class="row">
 			<div class="card col-sm-4" style="width: 22rem; background-color: gray; padding: 3rem; ">
 			  	<div class="card-body">
@@ -364,7 +115,8 @@ p.ex1 {
 				    	Sql, Sql server, Sqlite <br/>
 				    	Java <br/>
 				    	Arduino <br/>
-				    	.Net <br/>
+						.Net <br/>
+						Golang <br/>
 				    </p>
 				</div>
 			</div>
@@ -385,7 +137,10 @@ p.ex1 {
 				    	Computer systems (CSCI 2400)<br/>
 				    	Discrete structures (CSCI 2824)<br/>
 				    	Software Development (CSCI 3308)<br/>
-				    	Advanced Robotics (CSCI 4302)<br/>
+						Advanced Robotics (CSCI 4302)<br/>
+						Formula 1/10th (CSCI 4830)<br/>
+						Fundamentals of human computer interaction (CSCI 3002)<br/>
+						Algorithms (CSCI 3104)<br/>
 				    </p>
 				</div>
 			</div>
@@ -394,14 +149,26 @@ p.ex1 {
 				  <div class="card-body">
 				    <h2 class="card-title">Other related skills/experience</h2>
 				    <p class="card-text">
-				    	tensorflow <br/>
+						tensorflow <br/>
+						Pytorch <br/>
+						Open CV <br/>
 				    	Git <br/>
 				    	Visual studio team services (VSTS) <br/>
 				    	Ocutopus <br/>
 				    	Imbeded systems <br/>
 				    	Model, View, Controller (MVC) <br/>
 				    	hardware hacking <br/>
-				    	Docker<br/>
+						Docker <br/>
+						Kuberneties <br/>
+						Django <br/>
+						Jira <br/>
+						ObjectRocket v5 (DBaaS) <br/>
+						Google cloud <br/>
+						Elastic Search <br/>
+						PostgreSQL <br/>
+						TOX (unit testing) <br/>
+						CircleCI (automated deployment) <br/>
+						Codecov (code coverage) <br/>
 				    </p>
 				</div>
 			</div>
@@ -410,6 +177,7 @@ p.ex1 {
 				<div class="card-body">
 				    <h2 class="card-title">Work experience</h2>
 				    <p class="card-text">
+						ObjectRocket | Austin, TX | Summer 2019 <br/>
 				    	IQVIA | New Brunswick, NJ | Summer 2018 <br/>
 				    	Balanced Martial Arts | Eastchester, NY | 2011-2016 <br/>
 				    </p>
@@ -447,124 +215,5 @@ p.ex1 {
 	</div>
 </div>
 
-
-<script type="text/javascript">
-	var folder = "images/";
-
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $("body").append( "<img src='"+ folder + val +"'>" );
-            } 
-        });
-    }
-});
-
-
-
-//THIS IS THE NAVIGATION OF THE SITE
-function switcheroo(choice) {
-	var h = document.getElementById("home");
-	var s = document.getElementById("social");
-	var c = document.getElementById("contact");
-	var e = document.getElementById("easteregg");
-
-	if(choice == "h"){
-		if (h.style.display === "block") {
-        	h.style.display = "none";
-    	} else {
-        	h.style.display = "block";
-        	s.style.display = "none";
-        	c.style.display = "none";
-        	e.style.display = "none";
-    	}
-	}
-
-
-	if(choice == "s"){
-		if (s.style.display === "block") {
-        	s.style.display = "none";
-    	} else {
-        	s.style.display = "block";
-        	h.style.display = "none";
-        	c.style.display = "none";
-        	e.style.display = "none";
-    	}
-	}
-
-
-	if(choice == "c"){
-		if (c.style.display === "block") {
-        	c.style.display = "none";
-    	} else {
-        	c.style.display = "block";
-        	s.style.display = "none";
-        	h.style.display = "none";
-        	e.style.display = "none";
-    	}
-	}
-}
-
-
-
-// a key map of allowed keys
-var allowedKeys = {
-  37: 'left',
-  38: 'up',
-  39: 'right',
-  40: 'down',
-  65: 'a',
-  66: 'b'
-};
-
-// the 'official' Konami Code sequence
-var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
-
-// a variable to remember the 'position' the user has reached so far.
-var konamiCodePosition = 0;
-
-// add keydown event listener
-document.addEventListener('keydown', function(e) {
-  // get the value of the key code from the key map
-  var key = allowedKeys[e.keyCode];
-  // get the value of the required key from the konami code
-  var requiredKey = konamiCode[konamiCodePosition];
-
-  // compare the key with the required key
-  if (key == requiredKey) {
-
-    // move to the next key in the konami code sequence
-    konamiCodePosition++;
-
-    // if the last key is reached, activate cheats
-    if (konamiCodePosition == konamiCode.length) {
-      activateCheats();
-      konamiCodePosition = 0;
-    }
-  } else {
-    konamiCodePosition = 0;
-  }
-});
-
-function activateCheats() {
-  document.body.style.backgroundImage = "url('mtns.jpg')";
-
-  if (e.style.display === "block") {
-        e.style.display = "none";
-   	} else {
-	    e.style.display = "block";
-		h.style.display = "none";
-	    s.style.display = "none";
-	    c.style.display = "none";
-	}
-
-  alert("cheats activated");
-}
-
-	
-
-</script>
 
 </html>
