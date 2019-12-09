@@ -16,9 +16,9 @@ $.ajax({
 //THIS IS THE NAVIGATION OF THE SITE
 function switcheroo(choice) {
 	var h = document.getElementById("home");
-	var s = document.getElementById("social");
+	var s = document.getElementById("projects");
 	var c = document.getElementById("contact");
-	var e = document.getElementById("easteregg");
+	//var e = document.getElementById("easteregg");
 
 	if(choice == "h"){
 		if (h.style.display === "block") {
@@ -27,7 +27,7 @@ function switcheroo(choice) {
         	h.style.display = "block";
         	s.style.display = "none";
         	c.style.display = "none";
-        	e.style.display = "none";
+        	//e.style.display = "none";
     	}
 	}
 
@@ -39,7 +39,7 @@ function switcheroo(choice) {
         	s.style.display = "block";
         	h.style.display = "none";
         	c.style.display = "none";
-        	e.style.display = "none";
+        	//e.style.display = "none";
     	}
 	}
 
@@ -51,7 +51,7 @@ function switcheroo(choice) {
         	c.style.display = "block";
         	s.style.display = "none";
         	h.style.display = "none";
-        	e.style.display = "none";
+        	//e.style.display = "none";
     	}
 	}
 }

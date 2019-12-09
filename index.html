@@ -7,6 +7,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="scripts.js"></script>
 
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="#">Nikolaas Bender</a>
+		</div>
+		<ul class="nav navbar-nav">
+		<li><a onclick="switcheroo('h')">Home</a></li>
+		<li><a href="https://github.com/NikolaasBender">GitHub</a></li>
+		<li><a onclick="switcheroo('s')">Projects</a></li>
+		<li><a onclick="switcheroo('c')">Contact</a></li>
+		</ul>
+	</div>
+</nav>
 <!-- EVERYTHING SHOULD BE IN THIS DIV -->
 <div class="center">
 
@@ -24,6 +37,7 @@
 			<div class="container-fluid col-md-6">
 				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
 				  <div class="card-body">
+					  <h2>Who am I</h2>
 					<p class="card-text" style="font-size: 24px; " >I'm Nick Bender, I'm a computer science student at the University of Colorado Boulder. 
 						I build and learn. I love to learn and my favorite way to learn is by building. A lot of my repositories are records of me
 						learning something new or they are for school work. There are some more cheeky projects in there too, mosty because I found myself 
@@ -33,13 +47,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="story">
 		<div class="row, center" style="padding-bottom: 2rem">
 			<div class="container-fluid col-md-6">
 				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
 					<div class="card-body">
+						<h2>How I got here</h2>
 					<p class="card-text" style="font-size: 24px; " >Where I am now started with a joke during summer school when I joked about building a small
 						robot to roam around the engineering building at CU and knock over trash cans. I deigned and built a crude prototype, then a professor
 						me to to take a robotics class. The robotics class had us build software to race a small car around a hall way. In the class we learned
@@ -54,7 +66,153 @@
 			</div>
 		</div>
 	</div>
+	
     
-    <!-- This is for professional stuff like contact info, projects, etc -->
+	<!-- This is for professional stuff like contact info, projects, etc -->
+	<div id="contact" class="container" style="display:none; padding-left: 10rem; padding-right: 10rem;">
+		<div class="row, center" style="padding-bottom: 2rem;">
+			<div class="container-fluid col-md-6">
+				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+					<div class="card-body">
+						<h2>Contact me here</h2>
+						<p>
+								<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
+								</p>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<div id="projects" style="display:none; padding-left: 10rem; padding-right: 10rem;">
+		<div class='row' style="padding-bottom: 10rem;">
+			<div class="project">
+				
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>Lucky #7</h2>
+							<p class="card-text">
+							This was a project for advanced robotics where we automated a small remote control car using cameras, lidar, and a small computer to drive
+							around a section of hall way as part of a class competition. We used ROS for coordinating control of the car and all of the car's components. The project
+							taught us about IOT computers, ROS, SLAM, kalman filters, power management, and camera systems to name some of our bigger struggles and some of the larger
+							lessons we learned. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5" style="max-width: 550px; width: auto;">
+					<img src='IMG_20190409_183529_089.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="padding-bottom: 10rem;">
+			<div class='project'>
+				
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>Capable Octopus</h2>
+							<p class="card-text">
+							This project was a project as part of the autonomous vehicle competition class where we took the option of devising our own project 
+							to work on instead of making a small autonomous racecar. The robot platform we used was a clearpath jackal, for cumpute resources we used an intel nuc 
+							and an nvidia agx xavier. For sensors we used 3 of intel's d430 realsense cameras and gps. The goal of the project was to make the robot autonomousely 
+							navigate around our campus. For control we used a semantic segmentation network to follow sidewalks and stereo slam to map our campus. This project 
+							also helped some of the team members work on their capstone projetcs. For me it taught me more about segmentation networks, reinforcement learning, and
+							it hardened my knowledge of ROS.  
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5" style="max-width: 550px; width: auto;">
+					<img src='IMG_20191002_085933_037.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="padding-bottom: 10rem;">
+			<div class='project'>
+				
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>MARBLE GUI</h2>
+							<p class="card-text">
+							This is not a project I started but I intend to finish. I am working on the gui for managing CU's robotic deployment at the DARPA sub terranian
+							challenge. I have been optimizing what exists and expanding functonality. The challenge that the GUI has to overcome is that it has to help the mission
+							comander manage many robots with relative ease. The robots report artifcats and artifact locations during the event and the GUI fuses those artifact locations
+							then sends that information to DARPA's server. Seeing what each robot has reported can become overwhelming when there are 10 robots, I try to make that
+							amout of information managable.  
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="padding-bottom: 10rem;">
+			<div class='project'>
+				
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>Co-Lab</h2>
+							<p class="card-text">
+							This project was for a software development class. It was supposed to be like jira mixed with twitter. We built it using Golang and html, and it 
+							was a bit of a disaster. Learning Go on a project of this scale was difficult and my own leadership on the project could have been better becuase I didn't
+							excite my team and keep them working to their full potential. While the project did not earn a high grade it did teach us some lessons so it wasn't a complete
+							failure.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5" style="max-width: 550px; width: auto;">
+					<img src='CoLab presentation.png' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
+				</div>
+			</div>
+		</div>
+		
+		<div class="row" style="padding-bottom: 10rem;">
+			<div class='project'>
+				
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>Bumble Bot</h2>
+							<p class="card-text">
+							This was my first attempt to build a robot. It started as a joke that I should build a small robot to harass one of the instructors of a course
+							I was taking. The joke was funny to all parties involved including the instructor in question, so I started designing and building. As this was my first 
+							robotics project I didn't know anything beyond the fact that python on a raspberry pi could control some motors and the raspberry pi could also use ultra
+							sound distance sensors to navigate. The project never really went anywhere but it got me excited for robotics and it helped me get into the advanced 
+							robotics class where I learned most of what I know in robotics.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5" style="max-width: 550px; width: auto;">
+					<img src='IMG_20181201_163527_Bokeh.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="padding-bottom: 10rem;">
+			<div class="project">
+				<div class="container-fluid, col-md-6">
+					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
+						<div class="card-body">
+							<h2>SQL Deploy</h2>
+							<p class="card-text">
+							This project was for IQVIA where we built a tool to automatically deploy SQL scripts onto target servers. The automation involved deployment,
+							error handeling, and logging to a webiste for the developers to check. We took deployment time down from several hours to about 20 seconds 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
 
 </div>
