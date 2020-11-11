@@ -1,218 +1,531 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="scripts.js"></script>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Nikolaas Bender</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-		<a class="navbar-brand" href="#">Nikolaas Bender</a>
-		</div>
-		<ul class="nav navbar-nav">
-		<li><a onclick="switcheroo('h')">Home</a></li>
-		<li><a href="https://github.com/NikolaasBender">GitHub</a></li>
-		<li><a onclick="switcheroo('s')">Projects</a></li>
-		<li><a onclick="switcheroo('c')">Contact</a></li>
-		</ul>
-	</div>
-</nav>
-<!-- EVERYTHING SHOULD BE IN THIS DIV -->
-<div class="center">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Build Things</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#resume">Resume</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="modal" data-target="#contactmodal" >Contact</a></li>
 
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <!-- This is the landing page sort of overview section -->
-    <div id="home" style="display:block; padding-left: 10rem: padding-right: 10rem;">
-		<div style=" padding-bottom: 5rem; padding-top: 5rem; background: #86816C; background: linear-gradient(to right, #86816C, lightgray);" class="jumbotron">
-		    <h1>"Good people, good times"</h1>
-		</div>
-		<hr>
-		<div class="row, center" style="padding-bottom: 2rem">
-			<div class="col-md-5" style="max-width: 550px; width: auto;">
-				<img src="profile_pic.jpg" class="img-fluid" alt="Responsive image" style="max-width: 500px; width: auto; height: auto;">
-			</div>
-			<div class="container-fluid col-md-6">
-				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-				  <div class="card-body">
-					  <h2>Who am I</h2>
-					<p class="card-text" style="font-size: 24px; ">I'm Nick Bender, I'm a computer science student at the University of Colorado Boulder. 
-						I build and learn. I love to learn and my favorite way to learn is through building. A lot of my repositories are records of me
-						learning something on my own for school work. There are some more cheeky projects in there too, mosty arising from times I found myself 
-						with some free time and an itch to build something.</p>
-				  </div>
-				</div>
-			</div>
-		</div>
-		<div class="row, center" style="padding-bottom: 2rem">
-			<div class="container-fluid col-md-6">
-				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-					<div class="card-body">
-						<h2>How I got here</h2>
-					<p class="card-text" style="font-size: 24px; " >Where I am now started with a joke during summer school when I joked about building a small
-						robot to roam around the engineering building at CU and knock over trash cans. I deigned and built a crude prototype, then a professor
-						told me to to take a robotics class. The robotics class had us build software to race a small car around a hall way. In the class we learned
-						about core robotics concepts and we had to build path finding algorithms, kalman filters, and even implement realtime object detection. 
-						Autonomy is one hell of a drug. I ended up as part of the CU sub terranian challenge team and taking another robotics class where we were
-						allowed to design and build our own robot and our own midterm and final. Taking the knowledge from the previous class we built a robot
-						that would move around our campus autonomously. Through reading for this class I also found myself deeply interested in deep reinforcement	
-						learning and its application to robotics. Thats where My story ends in the fall of 2019, however there is adventure on the horizon, so I
-						know this section will get longer in the future.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-    
-	<!-- This is for professional stuff like contact info, projects, etc -->
-	<div id="contact" class="container" style="display:none; padding-left: 10rem; padding-right: 10rem;">
-		<div class="row, center" style="padding-bottom: 2rem;">
-			<div class="container-fluid">
-				<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-					<div class="card-body">
-						<h1 style="text-align: center;">Click button to email me</h1>
-						<p style="text-align: center;">
-						<a class="btn btn-primary" href="mailto:Nikolaas.M.C.Bender@gmail.com" target="_top">Click here to eamil</a>
-						</p>
-						<p style="text-align: center;">If you don't do automated email stuff: Nikolaas.M.C.Bender@gmail.com</p>
-					</div>
-				</div>
-			</div>	
-		</div>
-	</div>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/robot-line.png" alt="" />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Nikolaas Bender</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Creator - Researcher - Learner</p>
+            </div>
+        </header>
 
-	<div id="projects" style="display:none; padding-left: 10rem; padding-right: 10rem;">
-		<div class='row' style="padding-bottom: 10rem;">
-			<div class="project">
-				
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>Lucky #7</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This was a project for advanced robotics where we automated a small remote control car using cameras, lidar, and a small computer to drive
-							around a section of hall way as part of a class competition. We used ROS for coordinating control of the car and all of the car's components. The project
-							taught us about IOT computers, ROS, SLAM, kalman filters, power management, and camera systems to name some of our bigger struggles and some of the larger
-							lessons we learned. 
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5" style="max-width: 550px; width: auto;">
-					<img src='IMG_20190409_183529_089.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
-				</div>
-			</div>
-		</div>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="projects">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projects</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Sidewalk sculpin-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalSidewalk">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/sidewalk.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- number 7 -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalSeven">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/number7.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- co-lab -->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalCO">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/co-lab.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalGui">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/gui.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRadar">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/TONY+in+CO2.jpg" alt="" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 6-->
+                    <!-- <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="" />
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
 
-		<div class="row" style="padding-bottom: 10rem;">
-			<div class='project'>
-				
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>Capable Octopus</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This project was a project as part of the autonomous vehicle competition class where we took the option of devising our own project 
-							to work on instead of making a small autonomous racecar. The robot platform we used was a clearpath jackal, for cumpute resources we used an intel nuc 
-							and an nvidia agx xavier. For sensors we used 3 of intel's d430 realsense cameras and gps. The goal of the project was to make the robot autonomousely 
-							navigate around our campus. For control we used a semantic segmentation network to follow sidewalks and stereo slam to map our campus. This project 
-							also helped some of the team members work on their capstone projetcs. For me it taught me more about segmentation networks, reinforcement learning, and
-							it hardened my knowledge of ROS.  
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5" style="max-width: 550px; width: auto;">
-					<img src='IMG_20191002_085933_037.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
-				</div>
-			</div>
-		</div>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-5 ml-auto"><p class="lead">Professionally I am a roboticist, building robots particularly on the software side. I have a history of full stack web development which includes front end UX, mid layer servers, and database work. I am particularly interested with robotics in adveserial enviornments, such as self driving. The problem of autonomous vehicles is a challenge I particularly enjoy as it is a seemingly insurmountable challenge and for some twisted reason that only makes me want to work on it more. I have a deep seeded desire to keep challenging myself with new problems.</p></div>
+                    <div class="col-lg-5 mr-auto"><p class="lead">Personally I am a maker and a learner. I have been building since a young age. I am also an avid cyclist, racing cross country, enduro, and downhill mountain biking. I am also a martial artist with a history in MMA and other traditional styles. I love working out as it takes the weight off of my shoulders and lays it out in front of me, to that biking and fighting are some of the most fun ways to workout besides keeping my self discipline skills and my mind sharp.</p></div>
+                </div>
+                
+            </div>
+        </section>
 
-		<div class="row" style="padding-bottom: 10rem;">
-			<div class='project'>
-				
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>MARBLE GUI</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This is not a project I started but I intend to finish. I am working on the gui for managing CU's robotic deployment at the DARPA sub terranian
-							challenge. I have been optimizing what exists and expanding functonality. The challenge that the GUI has to overcome is that it has to help the mission
-							comander manage many robots with relative ease. The robots report artifcats and artifact locations during the event and the GUI fuses those artifact locations
-							then sends that information to DARPA's server. Seeing what each robot has reported can become overwhelming when there are 10 robots, I try to make that
-							amout of information managable.  
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <!-- Skills Section-->
+        <section class="page-section mb-0" id="skills">
+            <div class="container">
+                <!-- skills Section Heading-->
+                <h2 class="page-section-heading text-center text-secondary text-uppercase ">Skills</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- skills Section Content-->
+                <div class="row">
+                    <div class="col-lg-2 ml-auto"><p class="lead">Languages and Frameworks</p></div>
+                    <div class="col-lg-10 mr-auto" style="font-size: 4rem;">
+                        <i class="devicon-c-plain"></i>
+                        <i class="devicon-cplusplus-line"></i>
+                        <i class="devicon-csharp-line"></i>
+                        <i class="devicon-css3-plain-wordmark"></i>
+                        <i class="devicon-django-line"></i>
+                        <i class="devicon-docker-plain-wordmark"></i>
+                        <i class="devicon-dot-net-plain-wordmark"></i>
+                        <i class="devicon-electron-original"></i>
+                        <i class="devicon-git-plain-wordmark"></i>
+                        <i class="devicon-github-plain-wordmark"></i>
+                        <i class="devicon-gitlab-plain-wordmark"></i>
+                        <i class="devicon-go-plain"></i>
+                        <i class="devicon-heroku-original-wordmark"></i>
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-nodejs-plain-wordmark"></i>
+                        <i class="devicon-postgresql-plain-wordmark"></i>
+                        <i class="devicon-python-plain-wordmark"></i>
+                        <span class="iconify" data-icon="logos-pytorch" data-inline="false"></span>
+                        <span class="iconify" data-icon="logos-tensorflow" data-inline="false"></span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
 
-		<div class="row" style="padding-bottom: 10rem;">
-			<div class='project'>
-				
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>Co-Lab</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This project was for a software development class. It was supposed to be like jira mixed with twitter. We built it using Golang and html, and it 
-							was a bit of a disaster. Learning Go on a project of this scale was difficult and my own leadership on the project could have been better becuase I didn't
-							excite my team and keep them working to their full potential. While the project did not earn a high grade it did teach us some lessons so it wasn't a complete
-							failure.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5" style="max-width: 550px; width: auto;">
-					<img src='CoLab presentation.png' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
-				</div>
-			</div>
-		</div>
-		
-		<div class="row" style="padding-bottom: 10rem;">
-			<div class='project'>
-				
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>Bumble Bot</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This was my first attempt to build a robot. It started as a joke that I should build a small robot to harass one of the instructors of a course
-							I was taking. The joke was funny to all parties involved including the instructor in question, so I started designing and building. As this was my first 
-							robotics project I didn't know anything beyond the fact that python on a raspberry pi could control some motors and the raspberry pi could also use ultra
-							sound distance sensors to navigate. The project never really went anywhere but it got me excited for robotics and it helped me get into the advanced 
-							robotics class where I learned most of what I know in robotics.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5" style="max-width: 550px; width: auto;">
-					<img src='IMG_20181201_163527_Bokeh.jpg' class="img-fluid" alt="Responsive image" style="max-width: 90%; width: auto; height: auto;">
-				</div>
-			</div>
-		</div>
+        <!-- Resume Section-->
+        <section class="page-section bg-primary text-white mb-0" id="resume">
+            <div class="container">
+                <!-- Resume Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Resume</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="align-items-center" style="height: 80vh; margin-left: 10vw; margin-right: 5vw;">
+                    <object data="assets/resumeV3.pdf" type="application/pdf" height="100%" width="90%";>
+                    </object>
+                </div>
+               
+            </div>
+        </section>
 
-		<div class="row" style="padding-bottom: 10rem;">
-			<div class="project">
-				<div class="container-fluid, col-md-6">
-					<div class="card" style="width: auto; background-color: gray; padding: 3rem; float: middle">
-						<div class="card-body">
-							<h2>SQL Deploy</h2>
-							<p class="card-text" style="color: white; font-size: 22px;">
-							This project was for IQVIA where we built a tool to automatically deploy SQL scripts onto target servers. The automation involved deployment,
-							error handeling, and logging to a webiste for the developers to check. We took deployment time down from several hours to about 20 seconds 
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            Boulder CO, USA
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Connect</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="http://www.nyan.cat/"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/RaptureFlex"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/nikolaas-bender-302a05133/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/NikolaasBender"><i class="devicon devicon-github-plain"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Attribution</h4>
+                        <p class="lead mb-0">
+                            This is a theme based on the bootstrap theme "freelancer"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- sidewalk modal -->
+        <div class="portfolio-modal modal fade" id="portfolioModalSidewalk" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Capable Octopus</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sidewalk.jpg" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">This is project Capable Octopus, specifically a package called Sidewalk Sculpin. This whole project was for an advanced 
+                                        robotics seminar class where my team was given free reign over what robotics project we wanted to do. We chose to use a Clearpath Jackal 
+                                        due to its availability and as a sensor suite we exclusevely used Intel Realsense camera. For navigation we used a neural newtowrk running
+                                        a semanitc segmentation newtowrk called deeplabv3 that had been trained on the city scapes dataset. We used this trained network to get
+                                        an image mask of just the sidewalk where we computed the centroud of the sidewalk and ran a gradient descent algorithm to follow the sidewalk.</p>
+                                    <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=I7hWo7P2S24"> Watch the video here </a><br> <br>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- seven modal -->
+        <div class="portfolio-modal modal fade" id="portfolioModalSeven" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Number 7</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/number7.jpg" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">This is "lucky" number 7. This robot was built as the final project for the advanced robotics class at CU Boulder.
+                                        The robot is a 1/10th scale remote control car with an odroid and lidar sensors. The goal was to make the robot race around a track
+                                        created from a section of hallway in the engineering center. We had to contend with corners and large shipments of toiletries left
+                                        in a section of the race track. This was my first real robotics project and it really was trial by fire. Thankfully I had an amazing
+                                        team and I learned a lot from my team mates. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModalCO" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Co-Lab</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/co-lab.png" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">Co-lab was a project for a software development class. The idea of the website was to combine trello with twitter or slack.
+                                        Sharing information about projects and communicating effectively with remote members of work and tracking work projects. This project 
+                                        was more about learning how to use golang at the request of Rackspace before I started my internship there. Fun side note, I never 
+                                        wrote any golang during my summer at Rackspace, but I wrote a load of python widgets for dealing with databases.
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModalGui" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">MARBLE Gui</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/gui.png" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">This is "The Gui", a human operator interface for DARPA SubT team MARBLE. The interface puts the operator in contact
+                                        with the robots for sending and checking transforms, reciving and submitting artifacts found in the field, and controlling the robots
+                                        when necessary. The biger components I have added are around visialization of artifacts in rviz and being able to manipulate through rviz.
+                                        I have also been working on cleaning up and fixing issues with the project as a whole. I have been removing un-needed dependencies,
+                                        building and testing better setup scripts, organizing code, and updating the UI to better fit the operator's needs. As part of this 
+                                        project I left school for two weeks to drive the team truck full of robots out to Elma Washington where the DARPA SubT urban competition
+                                        was held. It was two weeks of working around the clock and driving a large penske truck was tiring but it was one of the best experiences
+                                        of my life. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Radar -->
+        <div class="portfolio-modal modal fade" id="portfolioModalRadar" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">Smartbases</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/TONY+in+CO2.jpg" alt="" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">The vehicle above is an electric golf cart with lidar, radar, gps, and cameras. This is the Smartbases project, a collaborative
+                                        effort between CU Boulder, ERDC, FirstTransit, and us Ignite to research the deploment of autonomous vehicles for bussing around select
+                                        Army bases. My parts of this project include working  with the radar, communicating to computers on the base to gather traffic information, 
+                                        and interviewing people as part of a human factors study surrounding how people interact with the vehicle. My goal is to get radar SLAM 
+                                        working, to then be combined with lidar. I am aming to use the radar data to track other agents in the world for the purpouse of collision
+                                        prediction. This project is particularly exciting for me as the saftey information we gain from this project will go on to save lives and
+                                        improve autonomous vehicles for everyone.
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact -->
+        <div class="portfolio-modal modal fade"  id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content" style="height: 80vh;" >
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">Contact</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <!-- Portfolio Modal - Image-->
+                                            <img class="rounded mb-5" height="40%" src="assets/img/avatar.jpg" alt="" />
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <h3>Nikolaas.m.c.Bender@gmail.com</h3>
+                                            <a class="btn btn-primary" href="mailto:Nikolaas.m.c.Bender@gmail.com">Click Here for mailto</a>
+                                            <br><br>
+                                            <h4>Other ways to get in touch</h4>
+                                            <div>
+                                                <a class="btn btn-outline-dark btn-social mx-1" href="https://twitter.com/RaptureFlex"><i class="fab fa-twitter"></i></a>
+                                                <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/nikolaas-bender-302a05133/"><i class="fab fa-linkedin-in"></i></a>
+                                                <a class="btn btn-outline-dark btn-social mx-1" href="https://github.com/NikolaasBender"><i class="devicon devicon-github-plain"></i></a>
+                                            </div>
 
-	</div>
-
-</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <!-- <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal6Label">Submarine</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="" />
+                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
