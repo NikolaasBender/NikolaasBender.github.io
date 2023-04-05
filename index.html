@@ -212,9 +212,45 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="align-items-center" style="height: 80vh; margin-left: 10vw; margin-right: 5vw;">
-                    <object data="assets/Resume_MK_IV.pdf" type="application/pdf" height="100%" width="90%";>
+                    <object data="assets/Resume_MK_IV_I.pdf" type="application/pdf" height="100%" width="90%";>
                     </object>
                 </div>
+               
+            </div>
+        </section>
+
+        <!-- Workout section 
+        on press button show suggested workout from workout.js optionally take difficulty input-->
+        <section class="page-section text-white mb-0" id="shoulder_pt">
+            <div class="container">
+                <!-- Resume Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">Spice up your shoulder PT with this</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-dark">
+                    <!-- text box to take a desired difficulty -->
+                    <!-- <input type="text" id="difficulty" placeholder="Difficulty"> -->
+                    <!-- button to activate workout and pass difficulty to javascript function -->
+                    <button type="button" class="btn btn-primary" onclick="displaySession()">Shoulder PT</button>
+                </div>
+                 <!-- hide until button press -->
+                 <div class="divider-custom-line" style="display: none; " id="ptdiv">
+                    <div class="divider-custom-line"></div>
+                    <!-- display the difficulty with an id of "total-difficulty" -->
+                    <h3 style="color: coral;" id="total-difficulty"> </h3>
+                    <!-- table for the workouts to be filled by java script -->
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Exercise</th>
+                                <th scope="col">Sets</th>
+                                <th scope="col">Reps</th>
+                            </tr>
+                        </thead>
+                        <tbody id="workout-table" >
+                            
+                        </tbody>
+                    </table>
+                </div>  
                
             </div>
         </section>
@@ -536,5 +572,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/workout.js"></script>
     </body>
 </html>
