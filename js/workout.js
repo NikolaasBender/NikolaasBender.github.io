@@ -176,8 +176,7 @@ const workout_datas = [
         "min_sets": 2,
         "max_reps": 20,
         "min_reps": 10,
-        "difficulty": 3,
-        "": []
+        "difficulty": 3
     },
     {
         "name": "wide pushup",
@@ -186,7 +185,6 @@ const workout_datas = [
         "max_reps": 20,
         "min_reps": 10,
         "difficulty": 4,
-        "": []
     },
         
     // pullups
@@ -204,8 +202,7 @@ const workout_datas = [
         "min_sets": 1,
         "max_reps": 10,
         "min_reps": 5,
-        "difficulty": 4,
-        "": []
+        "difficulty": 4
     },
     {
         "name": "chinup (palms facing you)",
@@ -213,8 +210,7 @@ const workout_datas = [
         "min_sets": 1,
         "max_reps": 10,
         "min_reps": 5,
-        "difficulty": 2,
-        "": []
+        "difficulty": 2
     },
     
     // bear crawls
@@ -224,8 +220,7 @@ const workout_datas = [
         "min_sets": 1,
         "max_reps": 5,
         "min_reps": 3,
-        "difficulty": 5,
-        "": []
+        "difficulty": 5
     },
     
     // shoulder touches
@@ -243,8 +238,7 @@ const workout_datas = [
         "min_sets": 2,
         "max_reps": 15,
         "min_reps": 7,
-        "difficulty": 3,
-        "": []
+        "difficulty": 3
     },
     {
         "name": "shoulder touch with rotation",
@@ -252,8 +246,25 @@ const workout_datas = [
         "min_sets": 2,
         "max_reps": 15,
         "min_reps": 7,
-        "difficulty": 3,
-        "": []
+        "difficulty": 3
+    },
+
+    {
+        "name": "sun-gods (arm circles)",
+        "max_sets": 4,
+        "min_sets": 2,
+        "max_reps": 30,
+        "min_reps": 15,
+        "difficulty": 2
+    },
+
+    {
+        "name": "chain breakers",
+        "max_sets": 4,
+        "min_sets": 2,
+        "max_reps": 20,
+        "min_reps": 10,
+        "difficulty": 2
     }
     
 ];
